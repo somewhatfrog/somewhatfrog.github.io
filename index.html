@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1E1F21;
+            color: #969896;
+            font-family: monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .links-block {
+            line-height: 1.6;
+            white-space: pre-line;
+        }
+        .links-block a {
+            color: #969896;
+            text-decoration: none;
+        }
+        .links-block a:hover {
+            color: #C5C8C6;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>valheim modlist</h1>
+    </div>
+    <div class="links-block" id="links-container">
+        https://thunderstore.io/c/valheim/p/Balrond/balrond_better_build/
+        https://thunderstore.io/c/valheim/p/Balrond/balrond_character_customization/
+        https://thunderstore.io/c/valheim/p/Balrond/balrond_core_optimizer/
+        https://thunderstore.io/c/valheim/p/MidnightMods/AchievementEnabler/
+        https://thunderstore.io/c/valheim/p/MidnightMods/AsyncSave/
+        https://thunderstore.io/c/valheim/p/MidnightMods/AutoConnector/
+        https://thunderstore.io/c/valheim/p/MidnightMods/CommunityPatchExtras/
+        https://thunderstore.io/c/valheim/p/MidnightMods/ValheimArmory/
+        https://thunderstore.io/c/valheim/p/MidnightMods/ValheimCommunityPatch/
+        https://thunderstore.io/c/valheim/p/MidnightMods/ValheimCommunityPatchGC/
+        https://thunderstore.io/c/valheim/p/NoPetRides/CropUtils/
+        https://thunderstore.io/c/valheim/p/RandyKnapp/EpicLoot/
+        https://thunderstore.io/c/valheim/p/RandyKnapp/EquipmentAndQuickSlots/
+        https://thunderstore.io/c/valheim/p/RandyKnapp/MinimalStatusEffects/
+        https://thunderstore.io/c/valheim/p/Skarif/BuildOnShip/
+        https://thunderstore.io/c/valheim/p/Skarif/ReBallista/
+        https://thunderstore.io/c/valheim/p/Skarif/RideOnTroll/
+        https://valheim.hexium.gg/mods/Azumatt/AzuAreaRepair
+        https://valheim.hexium.gg/mods/Azumatt/AzuAutoStore
+        https://valheim.hexium.gg/mods/Azumatt/AzuCraftyBoxes
+        https://valheim.hexium.gg/mods/Azumatt/AzuWearNTearPatches
+        https://valheim.hexium.gg/mods/Azumatt/AzuWorkbenchTweaks
+        https://valheim.hexium.gg/mods/Azumatt/CurrencyPocket
+        https://valheim.hexium.gg/mods/Azumatt/PetPantry
+        https://valheim.hexium.gg/mods/Azumatt/Recycle_N_Reclaim
+        https://valheim.hexium.gg/mods/Azumatt/SaveCrossbowState
+        https://valheim.hexium.gg/mods/denikson/BepInExPack_Valheim
+        https://valheim.hexium.gg/mods/Smoothbrain/CreatureLevelAndLootControl
+        https://valheim.hexium.gg/mods/shudnal/ConditionalConfigSync
+        https://valheim.hexium.gg/mods/shudnal/ConfigurationManager
+        https://valheim.hexium.gg/mods/sighsorry/InventoryActions
+        https://valheim.hexium.gg/mods/ValheimModding/Jotunn
+        https://valheim.hexium.gg/mods/ValheimModding/JsonDotNET
+        https://valheim.hexium.gg/mods/ValheimModding/YamlDotNet
+    </div>
+
+    <script>
+    const container = document.getElementById("links-container");
+    const text = container.textContent;
+    const urls = text.trim().split("\n");
+
+    container.innerHTML = "";
+    urls.forEach(url => {
+        const link = document.createElement("a");
+        link.href = url.trim();
+        link.textContent = url.trim();
+        link.target = "_blank";
+        container.appendChild(link);
+        container.appendChild(document.createElement("br"));
+    });
+    </script>
+</body>
+</html>
