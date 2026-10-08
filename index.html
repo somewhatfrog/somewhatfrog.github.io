@@ -28,13 +28,41 @@
             color: #C5C8C6;
             text-decoration: underline;
         }
+        .title-row {
+            display: flex;
+            align-items:
+            center;
+            gap: 1.0em;
+        }
+        .copy-btn {
+            background: none;
+            border: none;
+            color: #969896;
+            cursor: pointer;
+            padding: 0;
+            line-height: 1;
+            font: inherit;
+            font-size: 2em;
+        }
+        .copy-btn:hover {
+            color:
+            #C5C8C6;
+        }
+        .copy-btn:active {
+            opacity: 0.3;
+        }
     </style>
 </head>
 <body>
     <div>
-        <h1>valheim modlist</h1>
+        <div class="title-row">
+            <h1>valheim modlist</h1>
+            <button class="copy-btn" id="copy-btn" title="copy modlist">
+                ⧉
+            </button>
+        </div>
     </div>
-    <div class="links-block" id="links-container">
+    <div class="links-block" id="links-block">
         https://thunderstore.io/c/valheim/p/Balrond/balrond_better_build/
         https://thunderstore.io/c/valheim/p/Balrond/balrond_character_customization/
         https://thunderstore.io/c/valheim/p/Balrond/balrond_core_optimizer/
@@ -70,21 +98,25 @@
         https://valheim.hexium.gg/mods/ValheimModding/JsonDotNET
         https://valheim.hexium.gg/mods/ValheimModding/YamlDotNet
     </div>
-
     <script>
-    const container = document.getElementById("links-container");
-    const text = container.textContent;
-    const urls = text.trim().split("\n");
+        document.getElementById("copy-btn").addEventListener("click", function () {
+            const urls = [...document.querySelectorAll("#links-block a")].map(a => a.href);
+            navigator.clipboard.writeText(urls.join("\n"));
+        });
 
-    container.innerHTML = "";
-    urls.forEach(url => {
-        const link = document.createElement("a");
-        link.href = url.trim();
-        link.textContent = url.trim();
-        link.target = "_blank";
-        container.appendChild(link);
-        container.appendChild(document.createElement("br"));
-    });
+        const container = document.getElementById("links-block");
+        const text = container.textContent;
+        const urls = text.trim().split("\n");
+
+        container.innerHTML = "";
+        urls.forEach(url => {
+            const link = document.createElement("a");
+            link.href = url.trim();
+            link.textContent = url.trim();
+            link.target = "_blank";
+            container.appendChild(link);
+            container.appendChild(document.createElement("br"));
+        });
     </script>
 </body>
 </html>
