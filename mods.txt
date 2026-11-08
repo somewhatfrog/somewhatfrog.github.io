@@ -21,7 +21,6 @@ https://valheim.hexium.gg/mods/Azumatt/SaveCrossbowState
 https://valheim.hexium.gg/mods/denikson/BepInExPack_Valheim
 https://valheim.hexium.gg/mods/shudnal/ConditionalConfigSync
 https://valheim.hexium.gg/mods/shudnal/ConfigurationManager
-https://valheim.hexium.gg/mods/sighsorry/Dive_In
 https://valheim.hexium.gg/mods/sighsorry/InventoryActions
 https://valheim.hexium.gg/mods/ValheimModding/Jotunn
 https://valheim.hexium.gg/mods/ValheimModding/JsonDotNET
